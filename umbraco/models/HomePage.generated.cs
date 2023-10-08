@@ -50,14 +50,6 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
-		/// Hero Image: Hero Image
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("heroImage")]
-		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops HeroImage => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "heroImage");
-
-		///<summary>
 		/// Brand Images
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
@@ -96,6 +88,22 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("logoImage")]
 		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops LogoImage => global::Umbraco.Cms.Web.Common.PublishedModels.HeaderProperties.GetLogoImage(this, _publishedValueFallback);
+
+		///<summary>
+		/// Hero Effect
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("heroEffect")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops HeroEffect => global::Umbraco.Cms.Web.Common.PublishedModels.HeroProperties.GetHeroEffect(this, _publishedValueFallback);
+
+		///<summary>
+		/// Hero Image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("heroImage")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops HeroImage => global::Umbraco.Cms.Web.Common.PublishedModels.HeroProperties.GetHeroImage(this, _publishedValueFallback);
 
 		///<summary>
 		/// Hero Title: Here is the main title for the home page

@@ -1,10 +1,17 @@
 ﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@using Umbraco.Cms.Core.Models
+
 <footer>
         <div class="section-1">
+        @{
+        var footerLogo = Model.Value<MediaWithCrops>("footerLogo");
+        if (footerLogo != null)
+        {
+          <img src="@footerLogo.MediaUrl()" alt="logo" />
+        }
+      }
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
-          consectetur, ratione quibusdam odit veritatis vero laborum alias, quod
-          a earumat Lorem ipsum dolor sit amet..
+            @Model.Value("footerTextOne")
         </p>
       </div>
       <div class="section-2">
