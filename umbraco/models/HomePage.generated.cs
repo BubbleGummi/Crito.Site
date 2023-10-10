@@ -20,7 +20,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 {
 	/// <summary>Home Page</summary>
 	[PublishedModel("homePage")]
-	public partial class HomePage : PublishedContentModel, IBrandsLogos, IHeaderProperties, IHeroProperties, IMetaProperties
+	public partial class HomePage : PublishedContentModel, IBrandsLogos, IFooterProperties, IHeaderProperties, IHeroProperties, IMetaProperties
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -56,6 +56,30 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("brandImages")]
 		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.MediaWithCrops> BrandImages => global::Umbraco.Cms.Web.Common.PublishedModels.BrandsLogos.GetBrandImages(this, _publishedValueFallback);
+
+		///<summary>
+		/// Footer Logo: Here you can choose to add a footer logo
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("footerLogo")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops FooterLogo => global::Umbraco.Cms.Web.Common.PublishedModels.FooterProperties.GetFooterLogo(this, _publishedValueFallback);
+
+		///<summary>
+		/// Footer Text One: Here is your first footer section
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("footerTextOne")]
+		public virtual string FooterTextOne => global::Umbraco.Cms.Web.Common.PublishedModels.FooterProperties.GetFooterTextOne(this, _publishedValueFallback);
+
+		///<summary>
+		/// Footer Text Two: Here is your second footer section
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("footerTextTwo")]
+		public virtual global::System.Collections.Specialized.NameValueCollection FooterTextTwo => global::Umbraco.Cms.Web.Common.PublishedModels.FooterProperties.GetFooterTextTwo(this, _publishedValueFallback);
 
 		///<summary>
 		/// Header Address: address in the header
@@ -106,12 +130,36 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops HeroImage => global::Umbraco.Cms.Web.Common.PublishedModels.HeroProperties.GetHeroImage(this, _publishedValueFallback);
 
 		///<summary>
+		/// Hero Text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("heroText")]
+		public virtual string HeroText => global::Umbraco.Cms.Web.Common.PublishedModels.HeroProperties.GetHeroText(this, _publishedValueFallback);
+
+		///<summary>
 		/// Hero Title: Here is the main title for the home page
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("heroTitle")]
 		public virtual string HeroTitle => global::Umbraco.Cms.Web.Common.PublishedModels.HeroProperties.GetHeroTitle(this, _publishedValueFallback);
+
+		///<summary>
+		/// Primary Button
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("primaryButton")]
+		public virtual string PrimaryButton => global::Umbraco.Cms.Web.Common.PublishedModels.HeroProperties.GetPrimaryButton(this, _publishedValueFallback);
+
+		///<summary>
+		/// Secondary Button
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("secondaryButton")]
+		public virtual string SecondaryButton => global::Umbraco.Cms.Web.Common.PublishedModels.HeroProperties.GetSecondaryButton(this, _publishedValueFallback);
 
 		///<summary>
 		/// Meta Description

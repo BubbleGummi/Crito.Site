@@ -32,10 +32,25 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		global::Umbraco.Cms.Core.Models.MediaWithCrops HeroImage { get; }
 
+		/// <summary>Hero Text</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		string HeroText { get; }
+
 		/// <summary>Hero Title</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		string HeroTitle { get; }
+
+		/// <summary>Primary Button</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		string PrimaryButton { get; }
+
+		/// <summary>Secondary Button</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		string SecondaryButton { get; }
 	}
 
 	/// <summary>Hero properties</summary>
@@ -96,6 +111,19 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public static global::Umbraco.Cms.Core.Models.MediaWithCrops GetHeroImage(IHeroProperties that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(publishedValueFallback, "heroImage");
 
 		///<summary>
+		/// Hero Text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("heroText")]
+		public virtual string HeroText => GetHeroText(this, _publishedValueFallback);
+
+		/// <summary>Static getter for Hero Text</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
+		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		public static string GetHeroText(IHeroProperties that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "heroText");
+
+		///<summary>
 		/// Hero Title: Here is the main title for the home page
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
@@ -107,5 +135,31 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		public static string GetHeroTitle(IHeroProperties that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "heroTitle");
+
+		///<summary>
+		/// Primary Button
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("primaryButton")]
+		public virtual string PrimaryButton => GetPrimaryButton(this, _publishedValueFallback);
+
+		/// <summary>Static getter for Primary Button</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
+		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		public static string GetPrimaryButton(IHeroProperties that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "primaryButton");
+
+		///<summary>
+		/// Secondary Button
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("secondaryButton")]
+		public virtual string SecondaryButton => GetSecondaryButton(this, _publishedValueFallback);
+
+		/// <summary>Static getter for Secondary Button</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
+		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		public static string GetSecondaryButton(IHeroProperties that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "secondaryButton");
 	}
 }
